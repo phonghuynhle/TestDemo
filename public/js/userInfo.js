@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   function renderPage() {
     $.ajax({
-      url: "http://4.208.35.213/api/v1/users/getAllUser",
+      url: "http://20.254.253.173/api/v1/users/getAllUser",
       method: "GET",
       success: function (data) {
         const user = data.find(function (h) {
@@ -145,7 +145,7 @@ $(document).ready(function () {
     $(".popup-overlay-updateInfo").show();
     // Gửi yêu cầu để lấy chi tiết người dùng
     $.ajax({
-      url: `http://4.208.35.213/api/v1/users/getDetailUser/${id}`, //getDetailHotel
+      url: `http://20.254.253.173/api/v1/users/getDetailUser/${id}`, //getDetailHotel
       method: "GET",
       success: function (data) {
         $(".popup-overlay-updateInfo").html(`
@@ -186,7 +186,7 @@ $(document).ready(function () {
           const type = $("#type-user").val();
 
           $.ajax({
-            url: `http://4.208.35.213/api/v1/users/editUser/${id}`,
+            url: `http://20.254.253.173/api/v1/users/editUser/${id}`,
             method: "PUT",
             data: {
               name: name,
@@ -227,7 +227,7 @@ $(document).ready(function () {
 
     if (password == user.password) {
       $.ajax({
-        url: `http://4.208.35.213/api/v1/users/deleteUser/${id}`,
+        url: `http://20.254.253.173/api/v1/users/deleteUser/${id}`,
         method: "DELETE",
         success: function (data) {
           // Xử lý thành công

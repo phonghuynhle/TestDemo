@@ -18,7 +18,7 @@ const deleteImageMiddleware = (req, res, next) => {
     // Sử dụng module URL để phân tích URL và lấy đường dẫn tệp
     const urlObject = new URL(imageUrl);
     console.log(urlObject);
-    const imagePath = imageUrl.split("http://4.208.35.213/")[1];
+    const imagePath = imageUrl.split("http://20.254.253.173/")[1];
     // Lấy đường dẫn tệp sau domain
     console.log(imagePath);
     // Xác định đường dẫn tuyệt đối của file hình ảnh

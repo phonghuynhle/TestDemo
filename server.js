@@ -188,7 +188,7 @@ app.get("/hotel/:id", (req, res) => {
 });
 // Listen for connection events
 app.listen(port, async () => {
-  console.log("App listening on http://4.208.35.213");
+  console.log("App listening on http://20.254.253.173");
   try {
     await sequelize.authenticate();
     console.log(

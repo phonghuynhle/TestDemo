@@ -27,7 +27,7 @@ $(document).ready(function () {
     });
   });
   $.ajax({
-    url: `http://4.208.35.213/api/v1/hotels`,
+    url: `http://20.254.253.173/api/v1/hotels`,
     method: "GET",
     success: function (data) {
       const numberOfHotels = data.length;
@@ -69,14 +69,14 @@ $(document).ready(function () {
       var hotelName = this.textContent.trim();
       // Gửi yêu cầu AJAX để tìm hotelId tương ứng
       $.ajax({
-        url: "http://4.208.35.213/api/v1/hotels/getIdByHotelName",
+        url: "http://20.254.253.173/api/v1/hotels/getIdByHotelName",
         method: "POST",
         data: { hotelName: hotelName },
         success: function (response) {
           // Xử lý dữ liệu phản hồi (response) từ máy chủ
           var hotelId = response.hotelId;
           console.log("Hotel ID:", hotelId);
-          window.location.href = "http://4.208.35.213/hotel/" + hotelId;
+          window.location.href = "http://20.254.253.173/hotel/" + hotelId;
         },
         error: function (xhr, status, error) {
           console.error("Error:", error);
@@ -86,7 +86,7 @@ $(document).ready(function () {
   });
 
   $.ajax({
-    url: `http://4.208.35.213/api/v1/reviews/getFullReview`,
+    url: `http://20.254.253.173/api/v1/reviews/getFullReview`,
     method: "GET",
     success: function (data) {
       const numberOfHotels = data.length;
@@ -116,14 +116,14 @@ const findhotel = () => {
 
   // Gửi yêu cầu Axios tới API để tìm khách sạn với địa điểm đã nhập
   $.ajax({
-    url: `http://4.208.35.213/api/v1/hotels?map=${encodeURIComponent(
+    url: `http://20.254.253.173/api/v1/hotels?map=${encodeURIComponent(
       location
     )}`,
     method: "GET",
     success: function (data) {
       // Cập nhật nội dung trang khách sạn
       localStorage.setItem("hotelData", JSON.stringify(data));
-      window.location.href = `http://4.208.35.213/hotelList?map=${encodeURIComponent(
+      window.location.href = `http://20.254.253.173/hotelList?map=${encodeURIComponent(
         location
       )}`;
     },

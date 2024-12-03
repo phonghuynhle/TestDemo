@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   function renderPage() {
     $.ajax({
-      url: "http://4.208.35.213/api/v1/hotels",
+      url: "http://20.254.253.173/api/v1/hotels",
       method: "GET",
       success: function (data) {
         const hotel = data.find(function (h) {
@@ -181,7 +181,7 @@ $(document).ready(function () {
 
     // Gửi yêu cầu xóa người dùng
     $.ajax({
-      url: `http://4.208.35.213/api/v1/hotels/deleteHotel/${id}`,
+      url: `http://20.254.253.173/api/v1/hotels/deleteHotel/${id}`,
       method: "DELETE",
       success: function (data) {
         // Xử lý thành công
@@ -211,7 +211,7 @@ $(document).ready(function () {
 
     // Gửi yêu cầu xóa người dùng
     $.ajax({
-      url: `http://4.208.35.213/api/v1/hotels/deleteHotel/${id}`,
+      url: `http://20.254.253.173/api/v1/hotels/deleteHotel/${id}`,
       method: "DELETE",
       success: function (data) {
         // Xử lý thành công
@@ -262,7 +262,7 @@ $(document).ready(function () {
 
     // Gửi yêu cầu thêm người dùng
     $.ajax({
-      url: `http://4.208.35.213/api/v1/hotels`,
+      url: `http://20.254.253.173/api/v1/hotels`,
       method: "POST",
       processData: false, // Prevent jQuery from processing data
       contentType: false, // Prevent jQuery from setting content type
@@ -287,7 +287,7 @@ $(document).ready(function () {
     $(".popup-overlay-updateHotel").show();
     // Gửi yêu cầu để lấy chi tiết người dùng
     $.ajax({
-      url: `http://4.208.35.213/api/v1/hotels/${id}`,
+      url: `http://20.254.253.173/api/v1/hotels/${id}`,
       method: "GET",
       success: function (data) {
         console.log("2");
@@ -364,7 +364,7 @@ $(document).ready(function () {
           const apayment = $("#Hotelpayment").val();
           // alert(apayment);
           $.ajax({
-            url: `http://4.208.35.213/api/v1/hotels/updateHotel/${id}`,
+            url: `http://20.254.253.173/api/v1/hotels/updateHotel/${id}`,
             method: "PUT",
             data: {
               name: name,
@@ -397,7 +397,7 @@ $(document).ready(function () {
     console.log(hotelId);
     $("#imagePopupOverlayHotel").css("display", "block");
     $.ajax({
-      url: "http://4.208.35.213/api/v1/urlImageHotel/?HotelId=" + hotelId,
+      url: "http://20.254.253.173/api/v1/urlImageHotel/?HotelId=" + hotelId,
       method: "GET",
       success: function (data) {
         console.log(data);
@@ -445,7 +445,7 @@ $(document).ready(function () {
     var id = $(this).data("image-id"); // Lấy imageId từ data của nút delete
     var url = $(this).data("image-url");
     $.ajax({
-      url: "http://4.208.35.213/api/v1/urlImageHotel/?id=" + id,
+      url: "http://20.254.253.173/api/v1/urlImageHotel/?id=" + id,
       method: "DELETE",
       contentType: "application/json",
       data: JSON.stringify({ url: url }),
@@ -455,7 +455,7 @@ $(document).ready(function () {
         renderPage();
         $.ajax({
           url:
-            "http://4.208.35.213/api/v1/urlImageHotel/?HotelId=" + hotelId1,
+            "http://20.254.253.173/api/v1/urlImageHotel/?HotelId=" + hotelId1,
           method: "GET",
           success: function (data) {
             console.log(data);
@@ -547,7 +547,7 @@ $(document).ready(function () {
     console.log(formData);
     // Gửi yêu cầu AJAX POST lên server
     $.ajax({
-      url: "http://4.208.35.213/api/v1/urlImageHotel",
+      url: "http://20.254.253.173/api/v1/urlImageHotel",
       method: "POST",
       data: formData,
       processData: false, // Không xử lý dữ liệu

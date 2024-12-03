@@ -44,7 +44,7 @@ $(document).ready(function () {
   var hotelId = getParameterByName("hotelId");
   var roomId = getParameterByName("roomId");
   $.ajax({
-    url: "http://4.208.35.213/api/v1/hotels/" + hotelId,
+    url: "http://20.254.253.173/api/v1/hotels/" + hotelId,
     method: "GET",
     success: (data) => {
       $("#hotelName").text(data.name);
@@ -52,7 +52,7 @@ $(document).ready(function () {
   });
   // AJAX call to fetch hotel and room data
   $.ajax({
-    url: "http://4.208.35.213/api/v1/rooms/" + roomId,
+    url: "http://20.254.253.173/api/v1/rooms/" + roomId,
     method: "GET",
     success: (data) => {
       totalPrice = data.price * all;
@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
   const userID = localStorage.getItem("id");
   $.ajax({
-    url: "http://4.208.35.213/api/v1/users/getDetailUser/" + userID, // Endpoint to fetch user data
+    url: "http://20.254.253.173/api/v1/users/getDetailUser/" + userID, // Endpoint to fetch user data
     method: "GET",
     success: (data) => {
       if (data) {
@@ -95,7 +95,7 @@ $(document).ready(function () {
     console.log(totalPrice);
     
     $.ajax({
-      url: "http://4.208.35.213/api/v1/booking/", // Đường dẫn đến route trên máy chủ để xử lý dữ liệu
+      url: "http://20.254.253.173/api/v1/booking/", // Đường dẫn đến route trên máy chủ để xử lý dữ liệu
       method: "POST",
       data: JSON.stringify(data), // Send data as JSON string
       contentType: "application/json",
@@ -108,10 +108,10 @@ $(document).ready(function () {
         //Kiểm tra lựa chọn của người dùng và điều hướng tới trang tương ứng
         if (paymentMethod == "dbt") {
             // Nếu người dùng chọn thanh toán qua ngân hàng
-            window.location.href = `http://4.208.35.213/paymentmethod?bookingId=${bookingId}` // Thay đổi URL thành URL của trang thanh toán qua ngân hàng
+            window.location.href = `http://20.254.253.173/paymentmethod?bookingId=${bookingId}` // Thay đổi URL thành URL của trang thanh toán qua ngân hàng
         } else if (paymentMethod == "cd") {
             // Nếu người dùng chọn thanh toán trực tiếp
-            window.location.href = "http://4.208.35.213" // Thay đổi URL thành URL của trang thanh toán trực tiếp
+            window.location.href = "http://20.254.253.173" // Thay đổi URL thành URL của trang thanh toán trực tiếp
         } else {
             // Nếu không có lựa chọn nào được chọn
             alert("Vui lòng chọn phương thức thanh toán!");
@@ -125,6 +125,6 @@ $(document).ready(function () {
 
   // Redirect to home page
   $(".return").click(function () {
-    window.location.href = "http://4.208.35.213/";
+    window.location.href = "http://20.254.253.173/";
   });
 });

@@ -351,7 +351,7 @@ $(document).ready(() => {
 
     $.ajax({
       type: "GET",
-      url: `http://4.208.35.213/api/v1/hotels`,
+      url: `http://20.254.253.173/api/v1/hotels`,
       data: combinedData,
       success: function (response) {
         console.log(response);
@@ -446,7 +446,7 @@ $(document).ready(() => {
 
     // Gửi yêu cầu Ajax
     $.ajax({
-      url: "http://4.208.35.213/api/v1/hotelAmenities/hotel/amenities",
+      url: "http://20.254.253.173/api/v1/hotelAmenities/hotel/amenities",
       type: "POST", // Hoặc "GET" tùy thuộc vào API của bạn
       data: data,
       success: function (response) {

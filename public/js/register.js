@@ -30,7 +30,7 @@ const registerUser = (event) => {
   confirmPasswordError.text("");
 
   // Gửi yêu cầu đăng ký người dùng
-  fetch("http://4.208.35.213/api/v1/users/register", {
+  fetch("http://20.254.253.173/api/v1/users/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const registerUser = (event) => {
       localStorage.removeItem("type");
       console.log("Đăng ký:", result);
       // Chuyển hướng trang sau khi đăng ký thành công
-      window.location.href = "http://4.208.35.213/signin";
+      window.location.href = "http://20.254.253.173/signin";
     })
     .catch((error) => {
       console.error("Đăng ký thất bại:", error);

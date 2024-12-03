@@ -2,7 +2,7 @@ $(document).ready(function () {
   var room = localStorage.getItem("roomId");
   function renderPage() {
     $.ajax({
-      url: "http://4.208.35.213/api/v1/roomAmenities/" + room,
+      url: "http://20.254.253.173/api/v1/roomAmenities/" + room,
       method: "GET",
       success: function (data) {
         console.log(data);
@@ -52,7 +52,7 @@ $(document).ready(function () {
     try {
       // Make AJAX request to fetch data
       const response = await $.ajax({
-        url: "http://4.208.35.213/api/v1/amenities?type=1",
+        url: "http://20.254.253.173/api/v1/amenities?type=1",
         method: "GET",
       });
 
@@ -127,7 +127,7 @@ $(document).ready(function () {
 
       // Perform AJAX request to create the service
       $.ajax({
-        url: "http://4.208.35.213/api/v1/roomAmenities", // Adjust the URL endpoint
+        url: "http://20.254.253.173/api/v1/roomAmenities", // Adjust the URL endpoint
         method: "POST",
         data: JSON.stringify(data),
         headers: {
@@ -191,7 +191,7 @@ $(document).ready(function () {
 
     // Gửi yêu cầu xóa người dùng
     $.ajax({
-      url: `http://4.208.35.213/api/v1/roomAmenities/${id}`,
+      url: `http://20.254.253.173/api/v1/roomAmenities/${id}`,
       method: "DELETE",
       success: function (data) {},
       error: function (error) {
@@ -218,7 +218,7 @@ $(document).ready(function () {
 
     // Send request to fetch service details
     $.ajax({
-      url: `http://4.208.35.213/api/v1/roomAmenities/service/${id}`,
+      url: `http://20.254.253.173/api/v1/roomAmenities/service/${id}`,
       method: "GET",
       success: function (data) {
         console.log(data);
@@ -295,7 +295,7 @@ $(document).ready(function () {
 
           // Gửi yêu cầu AJAX khi dữ liệu đầu vào hợp lệ
           $.ajax({
-            url: `http://4.208.35.213/api/v1/roomAmenities/` + id,
+            url: `http://20.254.253.173/api/v1/roomAmenities/` + id,
             method: "PUT",
             contentType: "application/json",
             data: JSON.stringify({

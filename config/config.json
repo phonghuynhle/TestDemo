@@ -3,7 +3,7 @@
     "username": "root",
     "password": "Thao@112",
     "database": "vexere_db",
-    "host": "4.231.232.116",
+    "host": "20.254.237.249",
     "dialect": "mysql"
   },
   "test": {

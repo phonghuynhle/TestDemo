@@ -18,7 +18,7 @@ spec:
       containers:
       - name: nestjs-backend
         imagePullPolicy: Always
-        image: btlcr001.azurecr.io/nestjsbackend
+        image: btlcr01.azurecr.io/nestjsbackend
         ports:
         - containerPort: 3030 
 

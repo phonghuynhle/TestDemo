@@ -10,7 +10,7 @@ $(document).ready(function () {
   // Hàm gửi yêu cầu AJAX để lấy thông tin booking của người dùng
   function fetchUserBookings(userId) {
     $.ajax({
-      url: `http://4.208.35.213/api/v1/booking?user_id=` + userId, // Đường dẫn tới API hoặc endpoint để lấy thông tin booking
+      url: `http://20.254.253.173/api/v1/booking?user_id=` + userId, // Đường dẫn tới API hoặc endpoint để lấy thông tin booking
       type: "GET", // Loại yêu cầu là GET
       contentType: "application/json",
       success: function (data) {

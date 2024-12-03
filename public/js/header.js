@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("userName");
 
       // Thực hiện chuyển hướng về trang đăng nhập
-      window.location.href = "http://4.208.35.213/signin";
+      window.location.href = "http://20.254.253.173/signin";
     });
   }
 });

@@ -9,7 +9,7 @@ $(document).ready(function () {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   $.ajax({
-    url: "http://4.208.35.213/api/v1/hotels/" + hotelId,
+    url: "http://20.254.253.173/api/v1/hotels/" + hotelId,
     method: "GET",
 
     success: function (data) {
@@ -158,7 +158,7 @@ $(document).ready(() => {
 
   function loadReviews() {
     $.ajax({
-      url: "http://4.208.35.213/api/v1/reviews?hotelId=" + hotelId,
+      url: "http://20.254.253.173/api/v1/reviews?hotelId=" + hotelId,
       method: "GET",
       success: (data) => {
         $("#carousel-comment").empty(); // Xóa các đánh giá cũ
@@ -243,7 +243,7 @@ $(document).ready(() => {
 
       try {
         const response = await fetch(
-          "http://4.208.35.213/api/v1/reviews/create",
+          "http://20.254.253.173/api/v1/reviews/create",
           {
             method: "POST",
             body: formData,
@@ -291,7 +291,7 @@ $(document).ready(() => {
   }
 
   $.ajax({
-    url: "http://4.208.35.213/api/v1/rooms?hotelId=" + hotelId,
+    url: "http://20.254.253.173/api/v1/rooms?hotelId=" + hotelId,
     method: "GET",
 
     success: (data) => {
@@ -457,7 +457,7 @@ $(document).ready(function () {
   var url = window.location.pathname;
   var hotelId = url.substring(url.lastIndexOf("/") + 1);
   $.ajax({
-    url: "http://4.208.35.213/api/v1/hotels/" + hotelId,
+    url: "http://20.254.253.173/api/v1/hotels/" + hotelId,
     method: "GET",
 
     success: function (data) {
@@ -537,7 +537,7 @@ $(document).on("click", ".booking", function () {
   var roomId = $(this).data("room-id");
   var url = window.location.pathname;
   var hotelId = url.substring(url.lastIndexOf("/") + 1);
-  window.location.href = `http://4.208.35.213/payment?hotelId=${hotelId}&roomId=${roomId}`;
+  window.location.href = `http://20.254.253.173/payment?hotelId=${hotelId}&roomId=${roomId}`;
 });
 
 const findhotel = () => {
@@ -546,14 +546,14 @@ const findhotel = () => {
 
   // Gửi yêu cầu Axios tới API để tìm khách sạn với địa điểm đã nhập
   $.ajax({
-    url: `http://4.208.35.213/api/v1/hotels?map=${encodeURIComponent(
+    url: `http://20.254.253.173/api/v1/hotels?map=${encodeURIComponent(
       location
     )}`,
     method: "GET",
     success: function (data) {
       // Cập nhật nội dung trang khách sạn
       localStorage.setItem("hotelData", JSON.stringify(data));
-      window.location.href = `http://4.208.35.213/hotelList?map=${encodeURIComponent(
+      window.location.href = `http://20.254.253.173/hotelList?map=${encodeURIComponent(
         location
       )}`;
     },
