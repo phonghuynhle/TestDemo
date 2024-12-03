@@ -1,0 +1,9 @@
+{
+    "vnpay": {
+      "tmnCode": "DJ863C7C",
+      "hashSecret": "HRJBSXOGOFXSMSBKLAVLOFIOUCQOAPAG",
+      "url": "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html",
+      "returnUrl": "http://4.208.35.213/api/v1/vnpay/vnpay_return"
+    }
+  }
+  
